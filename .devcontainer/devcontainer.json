@@ -7,13 +7,6 @@
         "context": "."
     },
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:1": {
-            "installZsh": "true",
-            "username": "vscode",
-            "uid": "1000",
-            "gid": "1000",
-            "upgradePackages": "true"
-        },
         "ghcr.io/devcontainers/features/go:1": {
             "version": "none"
         },
@@ -37,7 +30,8 @@
             "extensions": [
                 "golang.Go",
                 "esbenp.prettier-vscode",
-                "yzhang.markdown-all-in-one"
+                "yzhang.markdown-all-in-one",
+                "eamodio.gitlens"
             ]
         }
     },
