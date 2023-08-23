@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/charmbracelet/bubbletea v0.24.2
-	github.com/muesli/termenv v0.15.2
+	github.com/charmbracelet/lipgloss v0.8.0
 )
 
 require (
@@ -17,6 +17,7 @@ require (
 	github.com/muesli/ansi v0.0.0-20230316100256-276c6243b2f6 // indirect
 	github.com/muesli/cancelreader v0.2.2 // indirect
 	github.com/muesli/reflow v0.3.0 // indirect
+	github.com/muesli/termenv v0.15.2 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect
 	golang.org/x/sync v0.3.0 // indirect
 	golang.org/x/sys v0.11.0 // indirect

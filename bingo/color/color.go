@@ -3,7 +3,7 @@ package color
 import (
 	"strconv"
 
-	"github.com/muesli/termenv"
+	"github.com/charmbracelet/lipgloss"
 )
 
 const (
@@ -12,16 +12,16 @@ const (
 	Magenta3   = "164"
 )
 
+// TODO: termenvをuninstallする
 var (
-	colorProf = termenv.EnvColorProfile().Color
-	bingoOn   = termenv.Style{}.Foreground(colorProf(Magenta3)).Styled
-	bingoOff  = termenv.Style{}.Foreground(colorProf(DeepPink4)).Styled
+	lbingoOn  = lipgloss.NewStyle().Foreground(lipgloss.Color(Magenta3))
+	lbingoOff = lipgloss.NewStyle().Foreground(lipgloss.Color(DeepPink4))
 )
 
 func BingoOn(tag int) string {
-	return bingoOn(strconv.Itoa(tag))
+	return lbingoOn.Render(strconv.Itoa(tag))
 }
 
 func BingoOFf(tag int) string {
-	return bingoOff(strconv.Itoa(tag))
+	return lbingoOff.Render(strconv.Itoa(tag))
 }
