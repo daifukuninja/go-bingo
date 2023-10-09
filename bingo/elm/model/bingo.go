@@ -5,15 +5,15 @@ import (
 	"github.com/daifukuninja/go-bingo/bingo/contents"
 )
 
-type Tag struct {
+type Bingo struct {
 	Tag int
 }
 
-func (m Tag) Init() tea.Cmd {
+func (m Bingo) Init() tea.Cmd {
 	return nil
 }
 
-func (m Tag) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+func (m Bingo) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
 		switch msg.String() {
@@ -27,7 +27,7 @@ func (m Tag) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
-func (m Tag) View() string {
+func (m Bingo) View() string {
 	producer := contents.NewProducer()
 	return producer.GetContents(m.Tag)
 }

@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	if _, err := tea.NewProgram(model.Tag{}).Run(); err != nil {
+	if _, err := tea.NewProgram(model.Bingo{}).Run(); err != nil {
 		fmt.Println("uh oh:", err)
 		os.Exit(1)
 	}
