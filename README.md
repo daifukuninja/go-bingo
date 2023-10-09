@@ -11,3 +11,29 @@
 - Finally, pick a number
 
 ## Features
+
+## How to debug
+
+definition to `launch.json`
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Bubbletea",
+            "type": "go",
+            "debugAdapter": "dlv-dap",
+            "request": "attach",
+            "mode": "remote",
+            "remotePath": "${workspaceFolder}",
+            "port": 2345,
+            "host": "127.0.0.1",
+        },
+    ]
+}
+```
+
+`dlv debug --headless --listen=:2345 .`
+
+Run `Attach to Bubbletea` on Run and Debug tab.
